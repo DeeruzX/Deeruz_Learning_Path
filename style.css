@@ -114,6 +114,33 @@ body {
         padding: 1em;
     }
 }
+/* ===== Learning Path Image ===== */
+.container-fit {
+  width: 500px; /* Specific width required for object-fit to work effectively */
+  height: 300px; /* Specific height required for object-fit to work effectively */
+  border: 1px solid black;
+}
+
+.container-fit img {
+  width: 100%; /* Forces the image to take up the full width/height defined by the container */
+  height: 100%;
+  object-fit: contain; /* Scales the image to fit entirely within the container, preserving aspect ratio (may leave empty space) */
+  /* If you want it to cover the whole container space (cropping the image), use object-fit: cover; */
+}
+
+.path-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.path-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(255, 230, 120, 0.35);
+}
 
 
 /* ===== Logo ===== */
